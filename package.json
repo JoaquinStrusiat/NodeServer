@@ -7,9 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "Joaquin Strusiat",
   "license": "ISC",
-  "description": "",
+  "description": "Este es un proyecto de API REST utilizando Node, Express y MongoDB",
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
