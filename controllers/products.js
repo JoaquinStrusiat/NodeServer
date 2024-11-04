@@ -1,8 +1,12 @@
 const { productModel } = require("../model");
 
 const getProducts = async (req, res) =>{
-    const data = await productModel.find({});
-    res.send({ data });
+    try {
+        const data = await productModel.find({});
+        res.send({ data });
+    } catch (error) {
+        console.log(error);
+    }
 };
 
 const getProduct = async (req, res) =>{
