@@ -15,11 +15,12 @@ app.use(cors());
 app.use(express.json());
 app.use("/", require("./routes"));
 
-
 app.listen(port, () => {
   console.log(`\nTu app está lista por http://localhost:${port}`)
 });
 
 dbConnect();
+
+console.log(1+ 2);
 
 

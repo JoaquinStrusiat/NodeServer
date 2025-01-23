@@ -19,6 +19,17 @@ const getProduct = async (req, res) =>{
     }
 };
 
+// Consulta nueva acá
+const getProductByQuery = async (req, res) => {
+    try {
+        const query = req.body;
+        const data = await productModel.find(query)
+        res.send(data);
+    } catch (error) {
+        console.log(error);
+    }
+}
+
 const createProduct = async (req, res) =>{
     try {
         const { body } = req;
@@ -50,4 +61,4 @@ const deleteProduct = async (req, res) =>{
     }
 };
 
-module.exports = { getProducts, getProduct, createProduct, updateProduct, deleteProduct};
+module.exports = { getProducts, getProduct, createProduct, updateProduct, deleteProduct, getProductByQuery};
