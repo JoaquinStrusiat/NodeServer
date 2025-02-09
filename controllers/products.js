@@ -19,9 +19,9 @@ const getProduct = async (req, res) =>{
     }
 };
 
-// Consulta nueva acá
+// Consulta nueva acá -------------------------------
 const getProductByQuery = async (req, res) => {
-    try {
+    try { 
         const query = req.body;
         const data = await productModel.find(query)
         res.send(data);

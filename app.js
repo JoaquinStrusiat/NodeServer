@@ -11,8 +11,7 @@ const port = process.env.PORT || 3001;
 const app = express();
 
 //Declaro que expres pueda utilizar cors, json y el router
-app.use(cors());
-app.use(express.json());
+app.use(cors(), express.json());
 app.use("/", require("./routes"));
 
 app.listen(port, () => {
@@ -20,7 +19,5 @@ app.listen(port, () => {
 });
 
 dbConnect();
-
-console.log(1+ 2);
 
 
